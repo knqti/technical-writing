@@ -1,5 +1,5 @@
-<summary><b>Table of Contents</b></summary>
-  <details>
+<details>
+  <summary><b>Table of Contents</b></summary>
 
 - [How to Set Up RStudio on a Virtual Machine](#how-to-set-up-rstudio-on-a-virtual-machine)
   - [Primer concepts (optional)](#primer-concepts-optional)
