@@ -1,16 +1,7 @@
-+++
-index = 2
-date = '2024-11-05T18:25:32-08:00'
-draft = false
-title = 'What is Wholesale?'
-tags = ['explainer', 'business']
-audience = 'laypeople'
-tone = ['semi-casual', 'non-technical']
-+++
+<details>
+  <summary><b>Table of Contents</b></summary>
 
-**Table of Contents**
-
-- [Introduction](#introduction)
+- [What is Wholesale?](#what-is-wholesale)
 - [Supply-chain](#supply-chain)
   - [Producer](#producer)
   - [Transporter](#transporter)
@@ -22,7 +13,9 @@ tone = ['semi-casual', 'non-technical']
 - [Sidenote on Brokers and Agents](#sidenote-on-brokers-and-agents)
 - [Conclusion](#conclusion)
 
-# Introduction
+</details>
+
+# What is Wholesale?
 
 Wholesale is the business of buying items from manufacturers and selling to other businesses. Wholesale companies ("Wholesalers") typically buy in large quantities and sell to retail companies ("Retailers") in smaller quantities.
 
