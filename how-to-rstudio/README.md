@@ -1,16 +1,7 @@
-+++
-index = 1
-date = '2024-11-01T00:00:00-08:00'
-draft = false
-title = 'How to Install RStudio on a Virtual Machine'
-tags = ['how-to', 'technology']
-audience = ['scientists', 'non-technical']
-tone = 'formal'
-+++
+<summary><b>Table of Contents</b></summary>
+  <details>
 
-**Table of Contents**
-
-- [Introduction](#introduction)
+- [How to Set Up RStudio on a Virtual Machine](#how-to-set-up-rstudio-on-a-virtual-machine)
   - [Primer concepts (optional)](#primer-concepts-optional)
     - [Virtual machine](#virtual-machine)
     - [Linux](#linux)
@@ -36,7 +27,9 @@ tone = 'formal'
     - [Mac/Linux](#maclinux)
   - [Firewall](#firewall)
 
-# Introduction
+  </details>
+
+# How to Set Up RStudio on a Virtual Machine
 
 This document shows you how to set up RStudio on a virtual machine (VM). By the end, you will have a computer that can be scaled to your R-programming needs.
 
@@ -65,7 +58,7 @@ A program used to enter text-only commands to a computer. Commands are typed out
 
 The following is a typical Linux command-line interface display:
 
-![cli example](../../assets/images/1/cli_example.png)
+![cli example](./images/cli_example.png)
 
 1. The user who is logged into the computer - in this example `root`.
 2. The name of the computer - in this example `manual-rstudio`.
@@ -74,7 +67,7 @@ The following is a typical Linux command-line interface display:
 
 The following shows a typical Linux command input and its resulting output:
 
-![cli date](../../assets/images/1/cli_date_example.png)
+![cli date](./images/cli_date_example.png)
 
 1. The command `date` is typed and entered.
 2. The output is `Tue Oct 29 18:36:52 UTC 2024`.
@@ -100,11 +93,11 @@ Steps to set up a pre-configured Droplet that includes RStudio.
 
 Select the pre-configured Droplet: [RStudio by Simply Statistics](https://marketplace.digitalocean.com/apps/rstudio).
 
-![rstudio logo](../../assets/images/1/preconfig_rstudio_logo.png)
+![rstudio logo](./images/preconfig_rstudio_logo.png)
 
 Click `Create RStudio Droplet`.
 
-![create rstudio](../../assets/images/1/preconfig_rstudio_create_droplet.png)
+![create rstudio](./images/preconfig_rstudio_create_droplet.png)
 
 ## 3. Configure the settings
 
@@ -112,7 +105,7 @@ Click `Create RStudio Droplet`.
 - **Datacenter:** Leave the defaults.
 - **Choose an image:** Select Rstudio by Simply Statistics.
 
-![rstudio image](../../assets/images/1/preconfig_rstudio_choose_image.png)
+![rstudio image](./images/preconfig_rstudio_choose_image.png)
 
 - **Choose Size:** Select the specifications you need. [Click here](https://docs.digitalocean.com/products/droplets/concepts/choosing-a-plan/) for more specifications details.
 
@@ -121,11 +114,11 @@ Click `Create RStudio Droplet`.
 - **Backups:** Select if needed.
 - **Choose Authentication Method:** Select the Password method for simplicity. Create a password for your Droplet.
 
-![authentication method](../../assets/images/1/preconfig_rstudio_auth_method.png)
+![authentication method](./images/preconfig_rstudio_auth_method.png)
 
 - **Finalize Details:** Change the Hostname to help identify your Droplet. Click `Create Droplet`.
 
-![create droplet](../../assets/images/1/preconfig_rstudio_spin_up_droplet.png)
+![create droplet](./images/preconfig_rstudio_spin_up_droplet.png)
 
 [Click here](https://docs.digitalocean.com/products/droplets/how-to/create/) for more settings details.
 
@@ -133,15 +126,15 @@ Click `Create RStudio Droplet`.
 
 Navigate to your Projects dashboard. Your newly-created Droplet is shown. Click your Droplet.
 
-![new droplet](../../assets/images/1/preconfig_rstudio_resources.png)
+![new droplet](./images/preconfig_rstudio_resources.png)
 
 Make note of your **ipv4 address** in the top menu bar. To the right, click `Console`.
 
-![console](../../assets/images/1/preconfig_rstudio_console.png)
+![console](./images/preconfig_rstudio_console.png)
 
 A [CLI](#command-line-interface-cli) window pops up. Look to the bottom for the line `root@{{your-hostname}}:~#`.
 
-![console](../../assets/images/1/preconfig_rstudio_cli.png)
+![console](./images/preconfig_rstudio_cli.png)
 
 Enter the following command into the CLI:
 
@@ -161,11 +154,11 @@ Open a new browser on your local computer. Enter your **ipv4 address** and `:878
 
 Enter your new user credentials into the RStudio sign in page.
 
-![rstudio login](../../assets/images/1/preconfig_rstudio_login.png)
+![rstudio login](./images/preconfig_rstudio_login.png)
 
 Congrats! You now have access to RStudio.
 
-![rstudio browser](../../assets/images/1/preconfig_rstudio_browser.png)
+![rstudio browser](./images/preconfig_rstudio_browser.png)
 
 # Manual Setup
 
@@ -179,7 +172,7 @@ Set up a Droplet with RStudio.
 
 Navigate to your Projects dashboard. Click `Create` and then `Droplets`.
 
-![create droplet](../../assets/images/1/manual_rstudio_create_droplet.png)
+![create droplet](./images/manual_rstudio_create_droplet.png)
 
 ## 3. Configure the settings
 
@@ -187,7 +180,7 @@ Navigate to your Projects dashboard. Click `Create` and then `Droplets`.
 - **Datacenter:** Leave the defaults.
 - **Choose an image:** Leave the defaults [Ubuntu](#linux) and its version.
 
-![ubuntu image](../../assets/images/1/manual_rstudio_choose_image.png)
+![ubuntu image](./images/manual_rstudio_choose_image.png)
 
 - **Choose Size:** Select the specifications you need. [Click here](https://docs.digitalocean.com/products/droplets/concepts/choosing-a-plan/) for more specifications details.
 
@@ -196,11 +189,11 @@ Navigate to your Projects dashboard. Click `Create` and then `Droplets`.
 - **Backups:** Select if needed.
 - **Choose Authentication Method:** Select the Password method for simplicity. Create a password for your Droplet.
 
-![authentication method](../../assets/images/1/preconfig_rstudio_auth_method.png)
+![authentication method](./images/preconfig_rstudio_auth_method.png)
 
 - **Finalize Details:** Change the Hostname to help identify your Droplet. Click `Create Droplet`.
 
-![create droplet](../../assets/images/1/preconfig_rstudio_spin_up_droplet.png)
+![create droplet](./images/preconfig_rstudio_spin_up_droplet.png)
 
 [Click here](https://docs.digitalocean.com/products/droplets/how-to/create/) for more settings details.
 
@@ -208,15 +201,15 @@ Navigate to your Projects dashboard. Click `Create` and then `Droplets`.
 
 Navigate to your Projects dashboard. Your newly-created Droplet is shown. Click your Droplet.
 
-![new droplet](../../assets/images/1/manual_rstudio_resources.png)
+![new droplet](./images/manual_rstudio_resources.png)
 
 In the top menu bar, note your **ipv4 address**. To the right, click the `Console`.
 
-![console](../../assets/images/1/preconfig_rstudio_console.png)
+![console](./images/preconfig_rstudio_console.png)
 
 A [CLI](#command-line-interface-cli) window pops up. Look to the bottom for the line `root@{{your-hostname}}:~#`.
 
-![console](../../assets/images/1/manual_rstudio_cli.png)
+![console](./images/manual_rstudio_cli.png)
 
 > Note: We used Ubuntu version 24.04 at the time of writing. Be sure to check the [official install instructions](https://posit.co/download/rstudio-server/) if you are on a different image/version.
 
@@ -236,7 +229,7 @@ RStudio Server is now active. You can always check the status with the command:
 
 `systemctl status rstudio-server`
 
-![server active](../../assets/images/1/manual_rstudio_server_active.png)
+![server active](./images/manual_rstudio_server_active.png)
 
 ## 5. Set up a new user
 
@@ -258,11 +251,11 @@ Open a new browser on your local computer. Enter your **ipv4 address** and `:878
 
 Enter your new user credentials into the RStudio sign in page.
 
-![rstudio login](../../assets/images/1/preconfig_rstudio_login.png)
+![rstudio login](./images/preconfig_rstudio_login.png)
 
 Congrats! You now have access to RStudio.
 
-![rstudio browser](../../assets/images/1/preconfig_rstudio_browser.png)
+![rstudio browser](./images/preconfig_rstudio_browser.png)
 
 # Final Considerations
 
@@ -302,7 +295,7 @@ Enable OpenSSH [with PowerShell](https://learn.microsoft.com/en-us/windows-serve
 2. Click "Add a feature".
 3. Search "OpenSSH Client" and click install.
 
-![optional features](../../assets/images/1/windows_optional_features.png)
+![optional features](./images/windows_optional_features.png)
 
 Enter the following command in your local CLI to transfer files:
 
@@ -332,14 +325,14 @@ Navigate to your Droplet:
 
 1. In the left-panel menu, click `Networking`.
 
-![networking](../../assets/images/1/manual_rstudio_networking.png)
+![networking](./images/manual_rstudio_networking.png)
 
 2. Scroll down to Firewalls, click `Edit`.
 3. Click `Create Firewall`.
 
    - **Name:** Create a name for the firewall.
    - **Inbound Rules:** Select the `New rule` drop-down and click `Custom`. Change the Port Range to `8787` and then save it.
-![firewall inbound](../../assets/images/1/manual_rstudio_firewall_inbound.png)
+![firewall inbound](./images/manual_rstudio_firewall_inbound.png)
 
    - **Outbound Rules:** Leave the defaults.
    - **Apply to Droplets:** Select your Droplet and then click `Create Firewall`.
